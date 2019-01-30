@@ -49,7 +49,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className='friendsForm'>
-          <h2>Form</h2>
+          <h2>Friends List</h2>
           <form onSubmit={ () => this.addFriend(this.state.friend) }>
             <input 
               type='text'
@@ -72,7 +72,7 @@ class App extends React.Component {
               onChange={this.handleChanges}
               value={this.state.friend.email}
             />
-            <button>Button</button>
+            <button>Add Friend</button>
           </form>
         </div>
           <FriendsList
