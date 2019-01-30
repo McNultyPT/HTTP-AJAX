@@ -1,32 +1,65 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: helvetica;
+}
+
+.friendsForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  height: 400px;
+  width: 600px;
+}
+
+.friendsForm h2 {
+  border-bottom: none;
+  border: 1px solid lightgrey;
+  width: 600px;
+  text-align: center;
+  height: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: seagreen;
+  color: white;
+  font-size: 26px;
+  margin: 0;
+}
+
+.friendsForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid lightgrey;
+  width: 600px;
+}
+
+.friendsForm input {
+  width: 500px;
+  height:50px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid lightgrey;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.friendsForm button {
+  width: 150px;
+  height: 30px;
+  margin: 25px 0 25px 0;
+  border-radius: 4px;
+  background-color: slategray;
+  font-size: 14px;
+  font-weight: bold;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.friendsForm button:hover {
+    color: slategray;
+    background-color: white;
+    border: 2px solid slategray;
 }

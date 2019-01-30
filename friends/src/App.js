@@ -26,9 +26,30 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <FriendsList
-          friends={this.state.friends}
-        />
+        <div className='friendsForm'>
+          <h2>Form</h2>
+          <form>
+            <input 
+              type='text'
+              name=''
+              placeholder=''
+            />
+            <input
+              type='text'
+              name=''
+              placeholder=''
+            />
+            <input
+              type='text'
+              name=''
+              placeholder=''
+            />
+            <button>Button</button>
+          </form>
+        </div>
+          <FriendsList
+            friends={this.state.friends}
+          />
       </div>
     );
   }
