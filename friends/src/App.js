@@ -32,17 +32,17 @@ class App extends React.Component {
             <input 
               type='text'
               name=''
-              placeholder=''
+              placeholder='Name'
             />
             <input
               type='text'
               name=''
-              placeholder=''
+              placeholder='Age'
             />
             <input
               type='text'
               name=''
-              placeholder=''
+              placeholder='Email'
             />
             <button>Button</button>
           </form>

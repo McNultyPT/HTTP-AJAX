@@ -1,0 +1,19 @@
+.friendCard {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid lightgrey;
+    width: 350px;
+    height: 250px;
+    font-size: 20px;
+    margin: 25px 0;
+}
+
+.friendCard h3 {
+    text-align: center;
+    font-size: 26px;
+    margin: 25px 0 15px 0;
+}
+
+.friendCard p {
+    margin: 15px;
+}

@@ -9,9 +9,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
+  margin: 100px 0 50px 0;
   height: 400px;
   width: 600px;
+  box-shadow: 5px 5px 5px 5px lightgrey;
 }
 
 .friendsForm h2 {
@@ -21,7 +22,6 @@
   text-align: center;
   height: 50px;
   padding-top: 20px;
-  padding-bottom: 20px;
   background-color: seagreen;
   color: white;
   font-size: 26px;
@@ -44,17 +44,17 @@
   border-left: none;
   border-bottom: 1px solid lightgrey;
   font-size: 20px;
-  margin-top: 10px;
+  margin: 25px 0 0 0;
+  outline: none;
 }
 
 .friendsForm button {
   width: 150px;
-  height: 30px;
-  margin: 25px 0 25px 0;
+  height: 40px;
+  margin: 50px 0 50px 0;
   border-radius: 4px;
   background-color: slategray;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 16px;
   color: white;
 }
 
