@@ -1,9 +1,30 @@
+.friendListContainer {
+    border-left: 2px solid grey;
+    margin-left: 100px;
+    padding-left: 150px;
+    width: 350px;
+    height: 1100px;
+}
+
+.friendListContainer h1 {
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid lightgrey;
+    padding: 15px 0 0 0;
+    margin-bottom: 50px;
+    background-color: slategray;
+    height: 50px;
+    border-radius: 30px;
+}
+
 .friendCard {
     display: flex;
     flex-direction: column;
     border: 2px solid lightgrey;
     width: 350px;
-    height: 250px;
+    height: 265px;
     font-size: 20px;
     margin: 25px 0;
 }
@@ -16,4 +37,9 @@
 
 .friendCard p {
     margin: 15px;
+}
+
+i {
+    text-align: right;
+    margin: 5px 10px 0 0;
 }

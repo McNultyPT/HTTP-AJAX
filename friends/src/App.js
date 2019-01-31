@@ -45,11 +45,34 @@ class App extends React.Component {
       .catch(err => console.log(err));
   }
 
+  updateFriend = () => {
+    axios
+      .put(`http://localhost:5000/friends/${this.state.friend.id}`, this.state.friend)
+      .then(res => {
+        this.setState({
+          friends: res.data.friend
+        });
+      })
+      .catch(err => console.log(err));
+  }
+
+  deleteFriend = (e, friendId) => {
+    e.preventDefault();
+    axios
+      .delete(`http://localhost:5000/friends/${friendId}`)
+      .then(res => {
+        this.setState({
+          friends: res.data
+        })
+      })
+      .catch(err => console.log(err));
+    }
+
   render() {
     return (
       <div className="App">
         <div className='friendsForm'>
-          <h2>Friends List</h2>
+          <h2>Friend</h2>
           <form onSubmit={ () => this.addFriend(this.state.friend) }>
             <input 
               type='text'
@@ -72,12 +95,16 @@ class App extends React.Component {
               onChange={this.handleChanges}
               value={this.state.friend.email}
             />
-            <button>Add Friend</button>
+            <div className='buttonCont'>
+              <button type='submit'>Add Friend</button>
+              <button>Update Friend</button>
+            </div>
           </form>
         </div>
-          <FriendsList
-            friends={this.state.friends}
-          />
+        <FriendsList
+          friends={this.state.friends}
+          deleteFriend={this.deleteFriend}
+        />
       </div>
     );
   }
