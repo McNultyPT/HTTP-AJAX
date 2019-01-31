@@ -3,6 +3,8 @@ import axios from 'axios';
 import './App.css';
 
 import FriendsList from './components/FriendsList';
+import FriendForm from './components/FriendForm';
+import UpdateFriendForm from './components/UpdateFriendForm';
 
 class App extends React.Component {
   constructor() {
@@ -50,7 +52,8 @@ class App extends React.Component {
       .put(`http://localhost:5000/friends/${this.state.friend.id}`, this.state.friend)
       .then(res => {
         this.setState({
-          friends: res.data.friend
+          friends: res.data.friend,
+          friend: this.state.friend
         });
       })
       .catch(err => console.log(err));
@@ -71,35 +74,17 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className='friendsForm'>
-          <h2>Friend</h2>
-          <form onSubmit={ () => this.addFriend(this.state.friend) }>
-            <input 
-              type='text'
-              name='name'
-              placeholder='Name'
-              onChange={this.handleChanges}
-              value={this.state.friend.name}
-            />
-            <input
-              type='text'
-              name='age'
-              placeholder='Age'
-              onChange={this.handleChanges}
-              value={this.state.friend.age}
-            />
-            <input
-              type='text'
-              name='email'
-              placeholder='Email'
-              onChange={this.handleChanges}
-              value={this.state.friend.email}
-            />
-            <div className='buttonCont'>
-              <button type='submit'>Add Friend</button>
-              <button>Update Friend</button>
-            </div>
-          </form>
+        <div>
+          <FriendForm
+            friend={this.state.friend}
+            handleChanges={this.handleChanges}
+            addFriend={this.addFriend}
+          />
+          <UpdateFriendForm
+            friend={this.state.friend}
+            handleChanges={this.handleChanges}
+            updateFriend={this.updateFriend}
+          />
         </div>
         <FriendsList
           friends={this.state.friends}

@@ -9,6 +9,7 @@ function FriendsList(props) {
             {props.friends.map(friend => (
                 <div className='friendCard' key={friend.id}>
                     <h3>Friend</h3>
+                    <p>ID: {friend.id}</p>
                     <p>Name: {friend.name}</p>
                     <p>Age: {friend.age}</p>
                     <p>Email: {friend.email}</p>
