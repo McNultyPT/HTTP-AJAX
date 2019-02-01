@@ -14,6 +14,7 @@ function FriendsList(props) {
                     <p>Age: {friend.age}</p>
                     <p>Email: {friend.email}</p>
                     <i onClick={e => props.deleteFriend(e, friend.id)} class="far fa-trash-alt"></i>
+                    <button onClick={e => props.populateForm(e, friend.id)}>Update Friend</button>
                 </div>
             ))}
         </div>

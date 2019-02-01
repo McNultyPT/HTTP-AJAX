@@ -15,7 +15,8 @@ class App extends React.Component {
         name: '',
         age: '',
         email: ''
-      }
+      },
+      updating: false
     };
   }
 
@@ -71,6 +72,14 @@ class App extends React.Component {
       .catch(err => console.log(err));
     }
 
+  populateForm = (e, id) => {
+    e.preventDefault();
+    this.setState({
+      friend: this.state.friends.find(friend => friend.id === id),
+      updating: true
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -79,16 +88,19 @@ class App extends React.Component {
             friend={this.state.friend}
             handleChanges={this.handleChanges}
             addFriend={this.addFriend}
+            updateFriend={this.updateFriend}
+            updating={this.state.updating}
           />
-          <UpdateFriendForm
+          {/* <UpdateFriendForm
             friend={this.state.friend}
             handleChanges={this.handleChanges}
             updateFriend={this.updateFriend}
-          />
+          /> */}
         </div>
         <FriendsList
           friends={this.state.friends}
           deleteFriend={this.deleteFriend}
+          populateForm={this.populateForm}
         />
       </div>
     );
