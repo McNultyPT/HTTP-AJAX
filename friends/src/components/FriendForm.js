@@ -6,7 +6,7 @@ function FriendForm(props) {
       if (props.updating) {
         props.updateFriend();
       } else {
-        props.addFriend();
+        props.addFriend(props.friend);
       }
     }
 
@@ -36,12 +36,14 @@ function FriendForm(props) {
             value={props.friend.email}
           />
           <div className='buttonCont'>
-            <button type='submit'>{props.updating ? 'Update Friend' : 'Add Friend'}</button>
-            {/* <button type='submit'>Update Friend</button> */}
+            <button type='submit'>Add Friend</button>
+            <button type='submit'>Update Friend</button>
           </div>
         </form>
       </div>
     );
 }
+
+// {props.updating ? 'Update Friend' : 'Add Friend'}
 
 export default FriendForm;
