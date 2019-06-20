@@ -1,0 +1,63 @@
+.friendListContainer {
+    border-left: 2px solid grey;
+    margin-left: 100px;
+    padding-left: 150px;
+    width: 350px;
+    height: 100%;
+}
+
+.friendListContainer h1 {
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid lightgrey;
+    padding: 15px 0 0 0;
+    margin-bottom: 50px;
+    background-color: slategray;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.friendCard {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid lightgrey;
+    width: 350px;
+    height: 300px;
+    font-size: 20px;
+    margin: 25px 0;
+}
+
+.friendCard h3 {
+    text-align: center;
+    font-size: 26px;
+    margin: 25px 0 15px 0;
+}
+
+.friendCard p {
+    margin: 15px;
+}
+
+.friendCard button {
+    width: 150px;
+    height: 25px;
+    margin: -22px 0 15px 100px;
+    border-radius: 4px;
+    background-color: #669999;
+    font-size: 14px;
+    color: white;
+    border: none;
+    box-shadow: 2px 2px 2px 2px lightgrey;
+}
+
+.friendCard button:hover {
+    color: #669999;
+    background-color: white;
+    border: 2px solid #669999;
+}
+
+i {
+    text-align: right;
+    margin: 15px 20px 0 0;
+}

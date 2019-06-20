@@ -1,0 +1,66 @@
+.App {
+  display: flex;
+  justify-content: center;
+  font-family: helvetica;
+}
+
+.friendsForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 150px 200px 50px 200px;
+  height: 400px;
+  width: 600px;
+  box-shadow: 5px 5px 5px 5px lightgrey;
+}
+
+.friendsForm h2 {
+  border-bottom: none;
+  border: 1px solid lightgrey;
+  width: 600px;
+  text-align: center;
+  height: 50px;
+  padding-top: 20px;
+  background-color: slategrey;
+  color: white;
+  font-size: 26px;
+  margin: 0;
+}
+
+.friendsForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid lightgrey;
+  width: 600px;
+}
+
+.friendsForm input {
+  width: 500px;
+  height:50px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid lightgrey;
+  font-size: 20px;
+  margin: 25px 0 0 0;
+  outline: none;
+}
+
+.friendsForm button {
+  width: 150px;
+  height: 40px;
+  margin: 35px 10px 50px 10px;
+  border-radius: 4px;
+  background-color: #669999;
+  font-size: 16px;
+  color: white;
+  border: none;
+  box-shadow: 2px 2px 2px 2px lightgrey;
+}
+
+.friendsForm button:hover {
+    color: #669999;
+    background-color: white;
+    border: 2px solid #669999;
+}
